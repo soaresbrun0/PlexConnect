@@ -141,9 +141,9 @@
                 <label>{{TEXT(Transcoder Action)}}</label>
                 <rightLabel>{{SETTING(transcoderaction)}}</rightLabel>
               </oneLineMenuItem>
-              <oneLineMenuItem id="TranscodeQuality" onSelect="toggleSettings('TranscodeQuality', 'Settings_Main')">
-                <label>{{TEXT(Transcoder Quality)}}</label>
-                <rightLabel>{{SETTING(transcodequality)}}</rightLabel>
+              <oneLineMenuItem id="LocalBitrate" onSelect="toggleSettings('LocalBitrate', 'Settings_Main')">
+                  <label>{{TEXT(Local Bitrate)}}</label>
+                  <rightLabel>{{SETTING(localbitrate)}}</rightLabel>
               </oneLineMenuItem>
               <oneLineMenuItem id="RemoteBitrate" onSelect="toggleSettings('RemoteBitrate', 'Settings_Main')">
                 <label>{{TEXT(Remote Bitrate)}}</label>

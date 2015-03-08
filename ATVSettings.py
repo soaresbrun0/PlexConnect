@@ -52,14 +52,9 @@ options = { \
     'tv_navbar_unwatched'       :('checked', 'unchecked'), \
     'tv_navbar_genres'          :('checked', 'unchecked'), \
     'tv_navbar_more'            :('checked', 'unchecked'), \
-    'transcodequality'  :('1080p 40.0Mbps', \
-                          '480p 2.0Mbps', \
-                          '720p 3.0Mbps', '720p 4.0Mbps', \
-                          '1080p 8.0Mbps', '1080p 10.0Mbps', '1080p 12.0Mbps', '1080p 20.0Mbps'), \
     'transcoderaction'  :('Auto', 'DirectPlay', 'Transcode'), \
-    'remotebitrate'     :('720p 3.0Mbps', '720p 4.0Mbps', \
-                          '1080p 8.0Mbps', '1080p 10.0Mbps', '1080p 12.0Mbps', '1080p 20.0Mbps', '1080p 40.0Mbps', \
-                          '480p 2.0Mbps'), \
+    'localbitrate'      :('2.0Mbps', '3.0Mbps', '4.0Mbps', '8.0Mbps', '10.0Mbps', '12.0Mbps', '20.0Mbps', '40.0Mbps'), \
+    'remotebitrate'     :('2.0Mbps', '3.0Mbps', '4.0Mbps', '8.0Mbps', '10.0Mbps', '12.0Mbps', '20.0Mbps', '40.0Mbps'), \
     'phototranscoderaction'     :('Auto', 'Transcode'), \
     'subtitlerenderer'  :('Auto', 'iOS, PMS', 'PMS'), \
     'subtitlesize'      :('100', '125', '150', '50', '75'), \
@@ -177,7 +172,7 @@ if __name__=="__main__":
     UDID = '007'
     ATVSettings.checkSection(UDID)
     
-    option = 'transcodequality'
+    option = 'localbitrate'
     print ATVSettings.getSetting(UDID, option)
     
     print "setSetting"

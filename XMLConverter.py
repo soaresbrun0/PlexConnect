@@ -1171,16 +1171,20 @@ class CCommandCollection(CCommandHelper):
             dprint(__name__, 2, "video: ATVNative - {0}", videoATVNative)
             
             # quality limits: quality=(resolution, quality, bitrate)
-            qLookup = { '480p 2.0Mbps' :('720x480', '60', '2000'), \
-                        '720p 3.0Mbps' :('1280x720', '75', '3000'), \
-                        '720p 4.0Mbps' :('1280x720', '100', '4000'), \
-                        '1080p 8.0Mbps' :('1920x1080', '60', '8000'), \
-                        '1080p 10.0Mbps' :('1920x1080', '75', '10000'), \
-                        '1080p 12.0Mbps' :('1920x1080', '90', '12000'), \
-                        '1080p 20.0Mbps' :('1920x1080', '100', '20000'), \
-                        '1080p 40.0Mbps' :('1920x1080', '100', '40000') }
+            lRes = '720x480'
+            mRes = '1280x720'
+            hRes = '1920x1080' if self.options['aTVScreenResolution'] == '1080' else '1280x720'
+            
+            qLookup = { '2.0Mbps' :(lRes, '60', '2000'), \
+                        '3.0Mbps' :(mRes, '75', '3000'), \
+                        '4.0Mbps' :(mRes, '100', '4000'), \
+                        '8.0Mbps' :(hRes, ('100' if hRes == mRes else '60'), '8000'), \
+                        '10.0Mbps' :(hRes, ('100' if hRes == mRes else '75'), '10000'), \
+                        '12.0Mbps' :(hRes, ('100' if hRes == mRes else '90'), '12000'), \
+                        '20.0Mbps' :(hRes, '100', '20000'), \
+                        '40.0Mbps' :(hRes, '100', '40000') }
             if PlexAPI.getPMSProperty(self.ATV_udid, self.PMS_uuid, 'local')=='1':
-                qLimits = qLookup[g_ATVSettings.getSetting(self.ATV_udid, 'transcodequality')]
+                qLimits = qLookup[g_ATVSettings.getSetting(self.ATV_udid, 'localbitrate')]
             else:
                 qLimits = qLookup[g_ATVSettings.getSetting(self.ATV_udid, 'remotebitrate')]
             
