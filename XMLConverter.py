@@ -1188,6 +1188,9 @@ class CCommandCollection(CCommandHelper):
             else:
                 qLimits = qLookup[g_ATVSettings.getSetting(self.ATV_udid, 'remotebitrate')]
             
+            # HLS segment length
+            segmentLength = g_ATVSettings.getSetting(self.ATV_udid, 'segmentlength')
+            
             # subtitle renderer, subtitle selection
             subtitleRenderer = g_ATVSettings.getSetting(self.ATV_udid, 'subtitlerenderer')
             
@@ -1249,7 +1252,7 @@ class CCommandCollection(CCommandHelper):
                              'dontBurnIn': '1' if subtitleDirectPlay else '0', \
                              'size': g_ATVSettings.getSetting(self.ATV_udid, 'subtitlesize') }
                 audio = { 'boost': g_ATVSettings.getSetting(self.ATV_udid, 'audioboost') }
-                res = PlexAPI.getTranscodeVideoPath(res, AuthToken, self.options, transcoderAction, qLimits, subtitle, audio, partIndex)
+                res = PlexAPI.getTranscodeVideoPath(res, AuthToken, self.options, transcoderAction, qLimits, segmentLength, subtitle, audio, partIndex)
         
         else:
             dprint(__name__, 0, "VIDEOURL - MEDIA element not found: {0}", param)

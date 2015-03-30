@@ -55,6 +55,7 @@ options = { \
     'transcoderaction'  :('Auto', 'DirectPlay', 'Transcode'), \
     'localbitrate'      :('2.0Mbps', '3.0Mbps', '4.0Mbps', '8.0Mbps', '10.0Mbps', '12.0Mbps', '20.0Mbps', '40.0Mbps'), \
     'remotebitrate'     :('2.0Mbps', '3.0Mbps', '4.0Mbps', '8.0Mbps', '10.0Mbps', '12.0Mbps', '20.0Mbps', '40.0Mbps'), \
+    'segmentlength'     :('Auto', '5', '10'), \
     'phototranscoderaction'     :('Auto', 'Transcode'), \
     'subtitlerenderer'  :('Auto', 'iOS, PMS', 'PMS'), \
     'subtitlesize'      :('100', '125', '150', '50', '75'), \

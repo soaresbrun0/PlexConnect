@@ -149,6 +149,10 @@
                 <label>{{TEXT(Remote Bitrate)}}</label>
                 <rightLabel>{{SETTING(remotebitrate)}}</rightLabel>
               </oneLineMenuItem>
+              <oneLineMenuItem id="SegmentLength" onSelect="toggleSettings('SegmentLength', 'Settings_Main')">
+                  <label>{{TEXT(Segment Length)}}</label>
+                  <rightLabel>{{SETTING(segmentlength)}}</rightLabel>
+              </oneLineMenuItem>
               <oneLineMenuItem id="PhotoTranscoderAction" onSelect="toggleSettings('PhotoTranscoderAction', 'Settings_Main')">
                 <label>{{TEXT(Photo Transcoder Action)}}</label>
                 <rightLabel>{{SETTING(phototranscoderaction)}}</rightLabel>

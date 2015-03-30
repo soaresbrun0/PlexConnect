@@ -677,12 +677,13 @@ parameters:
     options - dict() of PlexConnect-options as received from aTV
     action - transcoder action: Auto, Directplay, Transcode
     quality - (resolution, quality, bitrate)
+    segmentLength - Auto or an integer representing the number of seconds per segment
     subtitle - {'selected', 'dontBurnIn', 'size'}
     audio - {'boost'}
 result:
     final path to pull in PMS transcoder
 """
-def getTranscodeVideoPath(path, AuthToken, options, action, quality, subtitle, audio, partIndex):
+def getTranscodeVideoPath(path, AuthToken, options, action, quality, segmentLength, subtitle, audio, partIndex):
     UDID = options['PlexConnectUDID']
     
     transcodePath = '/video/:/transcode/universal/start.m3u8?'
@@ -691,6 +692,7 @@ def getTranscodeVideoPath(path, AuthToken, options, action, quality, subtitle, a
     vQ = quality[1]
     mVB = quality[2]
     dprint(__name__, 1, "Setting transcode quality Res:{0} Q:{1} {2}Mbps", vRes, vQ, mVB)
+    dprint(__name__, 1, "Segment length: {0}{1}", segmentLength, ('' if segmentLength == 'Auto' else 's'))
     dprint(__name__, 1, "Subtitle: selected {0}, dontBurnIn {1}, size {2}", subtitle['selected'], subtitle['dontBurnIn'], subtitle['size'])
     dprint(__name__, 1, "Audio: boost {0}", audio['boost'])
     
@@ -702,6 +704,8 @@ def getTranscodeVideoPath(path, AuthToken, options, action, quality, subtitle, a
     args['videoQuality'] = vQ
     args['directStream'] = '0' if action=='Transcode' else '1'
     # 'directPlay' - handled by the client in MEDIARUL()
+    if not segmentLength == 'Auto':
+        args['secondsPerSegment'] = segmentLength
     args['subtitleSize'] = subtitle['size']
     args['skipSubtitles'] = subtitle['dontBurnIn']  #'1'  # shut off PMS subtitles. Todo: skip only for aTV native/SRT (or other supported)
     args['audioBoost'] = audio['boost']
