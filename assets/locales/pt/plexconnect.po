@@ -2,15 +2,15 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Plex Connect\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2014-11-26 18:56:01+0000\n"
-"PO-Revision-Date: 2015-03-30 14:43-0500\n"
+"POT-Creation-Date: 2015-03-30 18:25:13+0000\n"
+"PO-Revision-Date: 2015-07-14 23:03-0300\n"
 "Language: pt\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.2\n"
 "Last-Translator: \n"
 "Language-Team: \n"
-"X-Generator: Poedit 1.7.5\n"
 
 msgid "ATV firmware version 5.1 or higher required. Please think about updating."
 msgstr "ATV firmware 5.1 ou maior é requerido. Por favor, observe antes de atualizar."
@@ -147,17 +147,35 @@ msgstr "Episódios"
 msgid "Failed"
 msgstr "Falhou"
 
+msgid "Enter the PlexHome user pin for {0}."
+msgstr "Digite o pin do PlexHome para o usuário {0}"
+
+msgid "Extras"
+msgstr "Extras"
+
+msgid "Fanart"
+msgstr "Fanart"
+
+msgid "Fanart Lower Blur"
+msgstr "Fanart Blur Baixo"
+
 msgid "Flatten Season"
 msgstr "Nivelar Temporada"
 
 msgid "Forum"
 msgstr "Fórum"
 
+msgid "General Appearance"
+msgstr "Aparência Geral"
+
 msgid "Genre"
 msgstr "Gênero"
 
 msgid "Genres"
 msgstr "Gêneros"
+
+msgid "Home Video Navigation Bar"
+msgstr "Barra de Navegação de Vídeos Caseiros"
 
 msgid "Home Video Options"
 msgstr "Opções dos Vídeos Caseiros"
@@ -167,6 +185,9 @@ msgstr "Ver Vídeos Caseiros"
 
 msgid "Home Videos Navigation Bar"
 msgstr "Barra de Navegação dos Vídeos Caseiros"
+
+msgid "Home Videos"
+msgstr "Vídeos Caseiros"
 
 msgid "Homepage"
 msgstr "Página Principal"
@@ -186,11 +207,17 @@ msgstr "Biblioteca"
 msgid "Library View"
 msgstr "Visualizar Biblioteca"
 
+msgid "Main Navigation Bar"
+msgstr "Barra de Navegação Principal"
+
 msgid "Mark as Unwatched"
 msgstr "Marcar como Não Assistido"
 
 msgid "Mark as Watched"
 msgstr "Marcar como Assistido"
+
+msgid "Miscellaneous"
+msgstr "Variados"
 
 msgid "More"
 msgstr "Mais"
@@ -221,6 +248,9 @@ msgstr "Opções das Músicas"
 
 msgid "Music View"
 msgstr "Visualização das Músicas"
+
+msgid "Music"
+msgstr "Música"
 
 msgid "MyPlex Password"
 msgstr "MyPlex Senha"
@@ -264,6 +294,9 @@ msgstr "Nenhuma"
 msgid "Now Playing"
 msgstr "Tocando Agora"
 
+msgid "Off"
+msgstr "Desligado"
+
 msgid "On Deck"
 msgstr "Em Progresso"
 
@@ -288,6 +321,9 @@ msgstr "Bibliotecas"
 msgid "Plex Channels"
 msgstr "Canais Plex"
 
+msgid "Plex Home Users"
+msgstr "Usuários Locais Plex"
+
 msgid "Plex Library"
 msgstr "Biblioteca Plex"
 
@@ -308,6 +344,12 @@ msgstr "PlexConnect"
 
 msgid "Poster Titles"
 msgstr "Título Original"
+
+msgid "PlexHome User PIN"
+msgstr "PIN do Usuário Plex Local"
+
+msgid "PrePlay Bottom Shelf"
+msgstr "Reprodução da Prateleira Inferior"
 
 msgid "Producers"
 msgstr "Produtores"
@@ -335,6 +377,9 @@ msgstr "Recarregar"
 
 msgid "Local Bitrate"
 msgstr "Qualidade Local"
+
+msgid "Related Movies"
+msgstr "Filmes Relacionados"
 
 msgid "Remote Bitrate"
 msgstr "Qualidade Remota"
@@ -393,6 +438,9 @@ msgstr "Embaralhar"
 msgid "Shutter Speed"
 msgstr "Velocidade Shutter"
 
+msgid "Sign Out"
+msgstr "Sair"
+
 msgid "SlideShow"
 msgstr "SlideShow"
 
@@ -417,6 +465,9 @@ msgstr "Sinopse oculta"
 msgid "TV Show Fanart"
 msgstr "Fanart das Séries de TV"
 
+msgid "Switch Home User"
+msgstr "Trocar usuário local"
+
 msgid "TV Show Navigation Bar"
 msgstr "Barra de Navegação das Séries de TV"
 
@@ -425,6 +476,9 @@ msgstr "Opções das Séries de TV"
 
 msgid "TV Show View"
 msgstr "Visualização das Séries de TV"
+
+msgid "TV Shows"
+msgstr "Séries de TV"
 
 msgid "TheMovieDB: No Trailer Info available"
 msgstr "TheMovieDB: Informação do Trailer Indisponível"
