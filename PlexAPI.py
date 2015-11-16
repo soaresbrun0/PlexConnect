@@ -253,18 +253,21 @@ def discoverPMS(ATV_udid, CSettings, IP_self, tokenDict={}):
       if CSettings.getSetting('enable_plexgdm')=='False':
         # defined in setting.cfg
         ip = CSettings.getSetting('ip_pms')
-        port = CSettings.getSetting('port_pms')
-        XML = getXMLFromPMS('http://'+ip+':'+port, '/servers', None, '')
-        
-        if XML==False:
-            pass  # no response from manual defined server (Settings.cfg)
+        if ip=='0.0.0.0':
+            pass # no need to check for local pms
         else:
-            Server = XML.find('Server')
-            uuid = Server.get('machineIdentifier')
-            name = Server.get('name')
-            
-            declarePMS(ATV_udid, uuid, name, 'http', ip, port)  # dflt: token='', local, owned
-            # todo - check IP to verify "local"?
+            port = CSettings.getSetting('port_pms')
+            XML = getXMLFromPMS('http://'+ip+':'+port, '/servers', None, '')
+        
+            if XML==False:
+                pass  # no response from manual defined server (Settings.cfg)
+            else:
+                Server = XML.find('Server')
+                uuid = Server.get('machineIdentifier')
+                name = Server.get('name')
+                
+                declarePMS(ATV_udid, uuid, name, 'http', ip, port)  # dflt: token='', local, owned
+                # todo - check IP to verify "local"?
       
       else:
         # signed into myPlex - poke plex.tv for servers
