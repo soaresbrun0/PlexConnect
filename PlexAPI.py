@@ -320,7 +320,8 @@ def getPMSListFromMyPlex(ATV_udid, authtoken):
                 name = Dir.get('name')
                 token = Dir.get('accessToken', authtoken)
                 owned = Dir.get('owned', '0')
-                local = Dir.get('publicAddressMatches')
+                #local = Dir.get('publicAddressMatches')
+                local = '0' # attempt to fix PlexConnect trying to connect locally, which causes issues
                 
                 if Dir.find('Connection') == None:
                     continue  # no valid connection - skip
